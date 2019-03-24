@@ -1,0 +1,147 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  background-color: $body-color;
+  color: $text-color;
+}
+
+nav {
+  border-bottom: 3px solid $primary-color;
+  padding: 2.5 * $base-dimension $base-dimension $base-dimension $base-dimension;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+hr {
+  border: 1px solid $dark-grey-color;
+  margin: $base-dimension 0;
+}
+
+.app {
+  position: relative;
+  height: 100vh;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.copyright {
+  background-color: $grey-color;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.text-dg {
+  color: $dark-grey-color;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.w-800 {
+  max-width: 800px;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+
+/** Card styling this styling should be extracted to it own file for large app**/
+
+.card {
+  border-radius: $base-dimension;
+  color: $white-color;
+  padding: $base-dimension;
+  height: $card-height;
+  margin-bottom: $base-dimension;
+  &.card-dark {
+    background-color: $dark-blue-color;
+    margin-bottom: 2 * $base-dimension;
+  }
+  &.card-default {
+    color: $primary-color;
+    border: 1px solid $primary-color;
+    button svg {
+      color: $primary-color;
+    }
+  }
+  &.card-primary {
+    position: relative;
+    color: $white-color;
+    background-color: $primary-color;
+    button svg {
+      color: $white-color;
+    }
+  }
+}
+
+.card-selected {
+  width: 2.5 * $base-dimension;
+  height: 3 * $base-dimension;
+  background-color: $body-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 1.5 * $base-dimension;
+  border-bottom-left-radius: 1.5 * $base-dimension;
+  position: absolute;
+  top: 4.5 * $base-dimension;
+  right: -$base-dimension;
+  svg {
+    color: $text-color;
+  }
+}
+
+/** This should be extracted into own file**/
+
+.loader {
+  margin-top: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  border: $base-dimension solid $grey-color;
+  border-radius: 50%;
+  border-top: $base-dimension solid $primary-color;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,55 @@
+@mixin button {
+  background-color: transparent;
+  border: none;
+  padding: $base-dimension #{$base-dimension * 4};
+  border-radius: 2 * $base-dimension;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  &:hover {
+    background-color: $dark-grey-color;
+  }
+}
+
+.btn-primary {
+  @include button();
+  background-color: $primary-color;
+  color: $white-color;
+  &:hover {
+    background-color: $primary-dark-color;
+  }
+}
+
+.btn {
+  @include button();
+}
+
+.btn-icon {
+  @include button();
+  border-radius: 0;
+  padding: 0;
+  &:hover {
+    background-color: $body-color;
+  }
+  &.icon-white {
+    color: $white-color;
+    &:hover {
+      background-color: transparent;
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.btn-default {
+  @include button();
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  &:hover {
+    background-color: $grey-color;
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "name": "conichi-code-challenge",
+  "version": "1.0.0",
+  "description": "React Conichi interview code challenge written with typescript, bundled and served with parcel",
+  "repository": {
+    "type": "git"
+  },
+  "author": "Morlo Mbakop",
+  "license": "UNLICENSED",
+  "main": "src/index.tsx",
+  "scripts": {
+    "develop": "concurrently -r \"npm:type-check:watch\" \"npm:start\"",
+    "start": "parcel ./src/index.html",
+    "build": "npm run type-check && parcel build ./src/index.html --public-url '/'",
+    "prettify": "prettier --write './src/**/*.{ts,tsx}'",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "tsc --noEmit --watch"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettify && npm run test"
+    }
+  },
+  "engines": {
+    "node": ">= 8.11.0",
+    "npm": ">= 6.0.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/config/test-preprocessor.js"
+    },
+    "testMatch": [
+      "**/__tests__/*.(test|spec).(ts|tsx|js)"
+    ]
+  },
+  "dependencies": {
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-icons": "^3.5.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/react": "^16.8.7",
+    "@types/react-dom": "^16.8.2",
+    "concurrently": "^4.1.0",
+    "jest": "^24.3.1",
+    "parcel-bundler": "^1.12.0",
+    "prettier": "^1.16.4",
+    "react-test-renderer": "^16.8.4",
+    "react-testing-library": "^6.0.0",
+    "sass": "^1.17.3",
+    "ts-jest": "^24.0.0",
+    "tslint": "^5.13.1",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.3.3333"
+  }
+}
