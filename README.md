@@ -11,7 +11,7 @@ This app is build with love and:
 ## Quick start
 
 1. Ensure you have node version 8.11.0 and above as well as npm version 6.0.0 and above installed
-2. From your terminal Naviagte to `conichi-code-challenge` directory
+2. From your terminal navigate to `conichi-code-challenge` directory
 3. run `npm i` to install project dependencies.
 4. run `npm run develop` to transpile typescript and start the app with type checking.
 5. run `npm run start` to transpile typescript and start the app. View the app on `localhost:1234`
