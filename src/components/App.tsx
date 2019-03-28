@@ -43,9 +43,7 @@ class App extends React.Component<{}> {
           isLoading: false,
           pageSetting: data[0],
           addresses: data[1],
-        }),
-        () => console.info(this.state)
-      )
+        }))
     )
   }
 

@@ -1,7 +1,8 @@
 import * as React from 'react'
-import { render, waitForElement } from 'react-testing-library'
-
+import { render, waitForElement, cleanup } from 'react-testing-library'
 import Footer from '../Footer'
+
+afterAll(cleanup)
 
 describe('Footer component', () => {
   const copyright = 'foo bar'

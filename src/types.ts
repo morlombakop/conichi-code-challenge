@@ -31,9 +31,7 @@ export interface IPageComponent {
   add_new_address: IAddNewAddress
 }
 
-export interface IContent {
-  heading: string
-  description: string
+export interface IContent extends  IAddNewAddress {
   components: IPageComponent
 }
 

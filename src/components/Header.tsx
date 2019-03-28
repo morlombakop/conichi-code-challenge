@@ -9,7 +9,7 @@ export interface IHeaderProps {
 class Header extends React.PureComponent<IHeaderProps> {
   render() {
     return (
-      <nav className="mb10 flex">
+      <nav className="mb10 flex" data-testid="header">
         <button className="btn-icon" title="Menu" type="button">
           <FaBars opacity="0.7" />
         </button>
